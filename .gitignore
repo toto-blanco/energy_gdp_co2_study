@@ -1,0 +1,84 @@
+# ========================
+# Fichiers sensibles dbt
+# ========================
+profiles.yml
+dbt/energy_projet_final/profiles.yml
+~/.dbt/profiles.yml
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+*.env
+
+# ========================
+# Répertoires dbt
+# ========================
+dbt/energy_projet_final
+dbt/energy_projet_final/target/
+dbt/energy_projet_final/dbt_packages/
+dbt/energy_projet_final/logs/
+target/
+dbt_packages/
+logs/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# ========================
+# Éditeurs / IDE
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ========================
+# Données sensibles
+# ========================
+# Données brutes (si volumineuses)
+# data/raw/*.csv
+# Décommentez si vos CSV sont trop lourds pour Git
+
+# Credentials
+credentials.json
+*.pem
+*.key
+
+# ========================
+# Base de données
+# ========================
+*.db
+*.sqlite
+*.sqlite3
+
+# ========================
+# Power BI
+# ========================
+*.pbix.tmp
+*.pbit
+
+# ========================
+# Système
+# ========================
+Thumbs.db
+desktop.ini
