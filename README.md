@@ -109,7 +109,7 @@ energy-analysis/
 │
 ├── .gitignore
 ├── README.md                   # Ce fichier
-└── LICENSE.md
+└── LICENSE
 ```
 
 ---
