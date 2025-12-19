@@ -18,13 +18,13 @@ Ce projet effectue une exploration approfondie des tendances énergétiques mond
 
 | Composant | Technologie | Usage |
 |-----------|-------------|-------|
-| **Collecte & Nettoyage** | Python (pandas, numpy, requests) | Scraping 6 sources, nettoyage 250k+ lignes |
+| **Collecte & Nettoyage** | Python (pandas, numpy)| nettoyage 250k+ lignes |
 | **Stockage** | PostgreSQL 16 (local + Neon cloud) | Raw data + warehouse OLAP |
-| **Transformation** | dbt 1.7 | Pipeline ETL `raw → staging → marts` (30+ modèles) |
+| **Transformation** | dbt 1.7 | Pipeline ETL `raw → staging → marts` (6 stagings) |
 | **Modélisation** | SQL (CTEs, window functions) | Schéma en étoile (2 dims, 2 facts) |
-| **Tests Qualité** | dbt tests + dbt_utils | 50+ tests automatisés |
+| **Tests Qualité** | dbt tests |
 | **Visualisation** | Power BI Desktop | Dashboards interactifs (15+ visuels) |
-| **Versioning** | Git + GitHub | CI/CD avec GitHub Actions *(à venir)* |
+| **Versioning** | Git + GitHub | 
 
 ---
 
@@ -77,7 +77,7 @@ Ce projet effectue une exploration approfondie des tendances énergétiques mond
 energy-analysis/
 │
 ├── 📂 data/
-│   ├── raw/                    # CSVs bruts (6 sources)
+│   ├── raw/                    # CSVs bruts (4 sources)
 │   ├── clean/                  # CSVs nettoyés (Python)
 │   └── README_sources.md       # Documentation des sources
 │
@@ -98,7 +98,6 @@ energy-analysis/
 ├── 📂 presentations/
 │   ├── energy_study.pbix                             # Fichier Power BI
 │   └── energy_projet_final_statique.pptx/            # présentation avec rapport power bi statique 
-    └── energy_projet_final_ videos.pptx/              # présentation avec rapport power bi videos
 │
 ├── 📂 docs/
 │   ├── methodology.md          # Méthodologie détaillée
@@ -110,7 +109,7 @@ energy-analysis/
 │
 ├── .gitignore
 ├── README.md                   # Ce fichier
-└── LICENSE
+└── LICENSE.md
 ```
 
 ---
@@ -373,7 +372,7 @@ dbt test
 
 Ce projet a été réalisé en groupe dans le cadre d'un bootcamp Data Analyst. Les contributions sont les bienvenues :
 
-- 🐛 **Bugs** : Ouvrir une [issue](https://github.com/toto-blanco/energy_and_economic_development_project/issues)
+- 🐛 **Bugs** : Ouvrir une [issue](https://github.com/toto-blanco/energy_gdp_co2_study/issues)
 - 💡 **Améliorations** : Fork + Pull Request
 
 ---
@@ -381,6 +380,7 @@ Ce projet a été réalisé en groupe dans le cadre d'un bootcamp Data Analyst. 
 ## 📜 Licence
 
 Ce projet est sous licence **Creative Commons BY-NC-SA 4.0**.
+
 
 **Vous êtes autorisé à** :
 - ✅ Partager et adapter le code

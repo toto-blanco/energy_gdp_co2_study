@@ -1,7 +1,7 @@
 # 📚 Sources de Données - Projet Analyse Énergétique Mondiale
 
 Ce document répertorie toutes les sources de données utilisées dans ce projet, avec leurs caractéristiques, licences et instructions d'accès.
-
+Github n'acceptant pas les fichiers de plus de 100.00 MB le fichier "imf_global_debt_databse.csv" n'est pas présent dans dans le depôt Github
 ---
 
 ## 📊 Vue d'ensemble
@@ -20,6 +20,7 @@ Ce document répertorie toutes les sources de données utilisées dans ce projet
 ---
 
 ## 🔗 Sources détaillées
+
 
 ### 1. Kaggle - Émissions CO₂ par pays, régions et secteurs
 
