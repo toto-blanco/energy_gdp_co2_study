@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: fact_energy_environment
+    description: "Fait principal regroupant consommation, production, électricité et émissions CO2."
+    columns:
+      - name: fact_key
+        description: Clé primaire de la fact
+        tests:
+          - unique
+          - not_null
+      - name: country_key
+        description: Clé étrangère vers dim_country
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_country')
+              field: country_key
+      - name: year
+        description: Clé étrangère vers dim_time
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_time')
+              field: year
+      - name: primary_energy_consumption
+        description: Consommation primaire totale (TWh)
+      - name: co2_emissions
+        description: Émissions de CO2 totales (t)
+      - name: greenhouse_gas_emissions
+        description: Émissions de GES totales
+      - name: access_electricity_pct
+        description: Accès à l'électricité (% population)
+
+  - name: fact_socio_economy
+    description: "Fait secondaire regroupant population, PIB, croissance, structure économique et dette."
+    columns:
+      - name: fact_key
+        description: Clé primaire de la fact
+        tests:
+          - unique
+          - not_null
+      - name: country_key
+        description: Clé étrangère vers dim_country
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_country')
+              field: country_key
+      - name: year
+        description: Clé étrangère vers dim_time
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_time')
+              field: year
+      - name: population
+        description: Population totale
+      - name: urban_population_percent
+        description: Pourcentage de population urbaine
+      - name: gdp
+        description: PIB (USD)
+      - name: gdp_per_capita
+        description: PIB par habitant (USD)
+      - name: gdp_growth
+        description: Croissance du PIB (%)
+      - name: industry_value_added_pct_gdp
+        description: Part de l'industrie dans le PIB (%)
+      - name: public_debt_pct_gdp
+        description: Dette publique (% du PIB)
+      - name: private_debt_pct_gdp
+        description: Dette privée (% du PIB)

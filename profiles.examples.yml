@@ -1,0 +1,23 @@
+energy_projet_final:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      password: your_password
+      dbname: energy_analysis
+      schema: public
+      threads: 4
+      
+    prod:
+      type: postgres
+      host: your-neon-instance.neon.tech
+      port: 5432
+      user: your_user
+      password: "{{ env_var('NEON_PASSWORD') }}"
+      dbname: energy_prod
+      schema: public
+      threads: 8
+```

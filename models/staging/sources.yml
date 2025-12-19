@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: energy_raw
+    description: "All cleaned raw tables for the energy final project"
+    
+    tables:
+      - name: owid_energy_data_clean
+        description: "OWID dataset: energy production, consumption, mix, intensities"
+
+      - name: data_co2_emissions_across_clean
+        description: "OWID CO2 dataset: emissions, per capita, per GDP"
+
+      - name: global_data_on_sustainable_energy_clean
+        description: "Global dataset on access to electricity, renewable energy, sustainability metrics"
+
+      - name: imf_global_debt_database_clean
+        description: "IMF dataset: general government & private debt (% of GDP)"
+
+      - name: indus_pourc_pib_clean
+        description: "Industry share of GDP dataset"
+
+      - name: pourc_pop_urb_clean
+        description: "Urban population percentage dataset"

@@ -1,0 +1,31 @@
+name: "energy_project_final"
+version: "1.0.0"
+config-version: 2
+
+profile: "energy_project_profile"
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  energy_project_final:
+    staging:
+      +materialized: view
+      
+
+    dimensions:
+      +materialized: table
+      
+
+    facts:
+      +materialized: table
+      

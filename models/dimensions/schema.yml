@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_country
+    description: "Dimension pays avec clés, codes et géolocalisation."
+    columns:
+      - name: country_key
+        description: Clé primaire unique du pays
+        tests:
+          - unique
+          - not_null
+      - name: country_name
+        description: Nom du pays
+        tests:
+          - unique
+          - not_null
+      - name: iso_code
+        description: Code ISO à 3 lettres
+      - name: country_code
+        description: Code pays alternatif
+      - name: latitude
+        description: Latitude
+      - name: longitude
+        description: Longitude
+      - name: land_area_km2
+        description: Superficie en km²
+      - name: density_per_km2
+        description: Densité de population par km²
+
+  - name: dim_time
+    description: "Dimension temps avec années, décennies et périodes."
+    columns:
+      - name: year
+        description: Année
+        tests:
+          - unique
+          - not_null
+      - name: decade
+        description: Décennie associée à l'année
+      - name: period
+        description: Période associée à l'année

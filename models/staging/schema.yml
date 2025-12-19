@@ -1,0 +1,88 @@
+version: 2
+
+models:
+  - name: stg_owid_data
+    description: "Données OWID sur l'énergie, production, consommation et mix énergétique."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: gdp
+        description: PIB en USD
+
+  - name: stg_data_co2
+    description: "Données OWID sur les émissions de CO2 et impact sur la température."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: co2
+        description: Émissions totales de CO2 (tonnes)
+
+  - name: stg_global_data
+    description: "Données globales sur l'accès à l'électricité, énergie renouvelable et consommation finale."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: access_electricity_pct
+        description: Pourcentage de la population ayant accès à l'électricité
+
+  - name: stg_imf_debt
+    description: "Données IMF sur la dette publique et privée (% du PIB)."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: general_government_pct_gdp
+        description: Dette d'état en % du PIB
+      - name: private_debt_pct_gdp
+        description: Dette privée en % du PIB
+
+  - name: stg_industry_pib
+    description: "Part de la valeur ajoutée industrielle dans le PIB (%)."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: industry_value_added_pct_gdp
+        description: Part de l'industrie dans le PIB (%)
+
+  - name: stg_urban_pop
+    description: "Pourcentage de la population urbaine."
+    columns:
+      - name: country
+        description: Nom du pays
+        tests:
+          - not_null
+      - name: year
+        description: Année
+        tests:
+          - not_null
+      - name: urban_population_percent
+        description: Pourcentage de la population vivant en zone urbaine
